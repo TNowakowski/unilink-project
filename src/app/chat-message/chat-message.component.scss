@@ -1,0 +1,13 @@
+.contact {
+    display: flex;
+
+    &.msg-author-sent {
+        flex-direction: row-reverse;
+    }
+
+    .contact-picture {
+        border-radius: 80px;
+        margin-right: 25px;
+    }
+    
+}

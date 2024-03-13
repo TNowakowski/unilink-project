@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-content>
+    <div class="contact">
+      <img class="contact-picture"
+      src="{{thread.avatarSrc}}" (click)="clicked($event)">
+    <div>
+      <h2>{{thread.name}}
+        <span *ngIf="selected">&bull;</span>
+      </h2>
+      <small>{{thread.lastMessage.text}}</small>
+    </div>
+  </div>
+  </mat-card-content>
+</mat-card>

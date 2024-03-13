@@ -1,0 +1,10 @@
+<mat-card class="contact" [ngClass]="{'msg-author-sent': !incoming, 'msg-author-receive': incoming}">
+  <img class="contact-picture" *ngIf="!incoming" src="{{message.author.avatarSrc}}">
+
+  <img class="contact-picture" *ngIf="incoming" src="{{message.author.avatarSrc}}">
+
+  <div [ngClass]="{'msg-sent': !incoming, 'msg-receive': incoming}">
+    <h5 >{{message.author.name}} • {{message.sentAt | date}}</h5>
+    <p>{{message.text}}</p>
+  </div>
+</mat-card>

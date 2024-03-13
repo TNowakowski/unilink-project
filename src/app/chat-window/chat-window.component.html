@@ -1,0 +1,22 @@
+<mat-card class="msg-container-base">
+    <h3 class="panel-title">
+      Chat - {{currentThread.name}}
+    </h3>
+
+  <mat-card-content>
+    <chat-message *ngFor="let message of messages | async" [message]="message">
+    </chat-message>
+  </mat-card-content>
+
+
+  <mat-card-actions>
+    <mat-form-field class="example-full-width">
+      <mat-label>Napisz wiadomość</mat-label>
+      <textarea type="text" matInput placeholder="Write your message here..." (keydown.enter)="onEnter($event)"
+        [(ngModel)]="draftMessage.text"> </textarea>
+    </mat-form-field>
+    <span>
+      <button mat-button color="primary" (click)="onEnter($event)">Wyślij</button>
+    </span>
+  </mat-card-actions>
+</mat-card>

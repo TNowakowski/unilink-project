@@ -1,0 +1,7 @@
+<mat-card class="container">
+  <h1>Kontakty</h1>
+  <div>
+    <chat-thread *ngFor="let thread of threads | async" [thread]="thread">
+    </chat-thread>
+  </div>
+</mat-card>
